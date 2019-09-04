@@ -23,12 +23,10 @@
     "type": "git",
     "url": "https://github.com/loicmahieu/react-native-nprogress"
   },
-  "main": "lib/index.js",
-  "types": "./lib/index.d.ts",
-  "files": ["lib/**/*"],
+  "main": "src/index.ts",
+  "files": ["src/**/*"],
   "scripts": {
-    "build": "rm -rf ./lib/* && yarn lint && tsc",
-    "prepublish": "yarn build",
+    "test": "yarn lint && tsc --noEmit",
     "lint": "tslint 'src/**/*.ts?(x)'"
   },
   "devDependencies": {

@@ -1,18 +1,24 @@
 {
   "compilerOptions": {
-    "outDir": "lib/",
-    "allowSyntheticDefaultImports": true,
-    "declaration": true,
-    "jsx": "react-native",
-    "lib": ["esnext"],
-    "target": "es5",
-    "module": "commonjs",
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react",
+    "lib": [
+      "esnext"
+    ],
+    "module": "esnext",
     "moduleResolution": "node",
-    "noEmitOnError": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitReturns": true,
+    "noImplicitUseStrict": false,
+    "noStrictGenericChecks": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
     "strict": true,
-    "pretty": true,
-    "removeComments": false,
-    "sourceMap": true
-  },
-  "include": ["src"],
+    "target": "esnext"
+  }
 }
