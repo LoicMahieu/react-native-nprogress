@@ -4152,6 +4152,11 @@ react-native-branch@~3.0.1:
   resolved "https://registry.yarnpkg.com/react-native-branch/-/react-native-branch-3.0.1.tgz#5b07b61cbd290168cd3c3662e017ebe0f356d2ca"
   integrity sha512-vbcYxPZlpF5f39GAEUF8kuGQqCNeD3E6zEdvtOq8oCGZunHXlWlKgAS6dgBKCvsHvXgHuMtpvs39VgOp8DaKig==
 
+react-native-nprogress@1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-native-nprogress/-/react-native-nprogress-1.0.1.tgz#e12d42bfd8915a107aaea163a759dce5b8797d98"
+  integrity sha512-RGZVEjzyvRc+zLKWO+eS7EWLfdMgP196kqnSDSka86NHDjK7+A0ldvvMFw7iH1cPspgaFky2ovcfhfa1e530Aw==
+
 react-native-view-shot@2.6.0:
   version "2.6.0"
   resolved "https://registry.yarnpkg.com/react-native-view-shot/-/react-native-view-shot-2.6.0.tgz#3b23675826f67658366352c4b97b59a6aded2f43"
