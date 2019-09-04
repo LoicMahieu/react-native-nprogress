@@ -6,6 +6,10 @@ A nanoscopic progress bar. With realistic trickle animations to tell your users 
 
 Completely inspired by [NProgress](https://github.com/rstacruz/nprogress), all credit goes back to their maintainers and contributors.
 
+<p align="center">
+<img src="https://raw.githubusercontent.com/loicmahieu/react-native-nprogress/master/doc/example.gif" height="550" />
+</p>
+
 ## Installation
 
 ```bash
