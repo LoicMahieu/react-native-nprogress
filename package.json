@@ -1,6 +1,6 @@
 {
   "name": "react-native-nprogress",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A nanoscopic progress bar. With realistic trickle animations to tell your users that something's happening! Completely inspired by NProgress",
   "keywords": [
     "react-native",
@@ -24,7 +24,9 @@
     "url": "https://github.com/loicmahieu/react-native-nprogress"
   },
   "main": "src/index.ts",
-  "files": ["src/**/*"],
+  "files": [
+    "src/**/*"
+  ],
   "scripts": {
     "test": "yarn lint && tsc --noEmit",
     "lint": "tslint 'src/**/*.ts?(x)'"
