@@ -51,3 +51,4 @@ export const MyApp = () => {
 | `backgroundColor` | `string` | `blue` | The background color of the bar.
 | `minimum` | `number` | `0.8` | The minimum percentage used upon starting.
 | `trickleSpeed` | `number` | `200` | Adjust how often to trickle/increment, in ms.
+| `fadeOutDuration` | `number` | `300` | Duration of the fade out animation.

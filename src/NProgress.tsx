@@ -40,17 +40,24 @@ export const NProgress = ({
   minimum = 0.8,
   trickleSpeed = 200,
   height = 2,
-  backgroundColor = "blue"
+  backgroundColor = "blue",
+  fadeOutDuration = 300
 }) => {
   const status = useRef<number>();
   const [width, setWidth] = useState(0);
-  const [animated] = useState(new Animated.Value(0));
+  const [progressAnim] = useState(new Animated.Value(0));
+  const [opacityAnim] = useState(new Animated.Value(0));
+
   const progressStyle = {
     backgroundColor,
     height,
+    opacity: opacityAnim.interpolate({
+      inputRange: [0, 1],
+      outputRange: [0, 1]
+    }),
     transform: [
       {
-        translateX: animated.interpolate({
+        translateX: progressAnim.interpolate({
           inputRange: [0, 1],
           outputRange: [width / -1, 0]
         })
@@ -90,12 +97,19 @@ export const NProgress = ({
     status.current = n === 1 ? undefined : n;
 
     queue(next => {
-      Animated.timing(animated, {
+      opacityAnim.setValue(1);
+      Animated.timing(progressAnim, {
         toValue: n === 1 ? 1 : status.current || 0,
         useNativeDriver: true
       }).start(() => {
         if (n === 1) {
-          animated.setValue(0);
+          Animated.timing(opacityAnim, {
+            duration: fadeOutDuration,
+            toValue: 0,
+            useNativeDriver: true
+          }).start(() => {
+            progressAnim.setValue(0);
+          });
         } else {
           next();
         }

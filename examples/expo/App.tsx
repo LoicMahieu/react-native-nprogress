@@ -3,7 +3,7 @@ import { NProgress } from "react-native-nprogress";
 import { View } from "react-native";
 
 export default function App() {
-  const [enabled, setEnabled] = useState(false);
+  const [enabled, setEnabled] = useState(true);
 
   // Change `enabled` each second to mimic loader
   useEffect(() => {
