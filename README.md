@@ -41,3 +41,13 @@ export const MyApp = () => {
   return <NProgress enabled={enabled} />;
 };
 ```
+
+## Props
+
+| Prop | Type | Default | Note |
+|---|---|---|---|
+| `enabled` | `boolean` | `false` | Start/stop the progress bar.
+| `height` | `number` | `2` | The height in pixel of the bar.
+| `backgroundColor` | `string` | `blue` | The background color of the bar.
+| `minimum` | `number` | `0.8` | The minimum percentage used upon starting.
+| `trickleSpeed` | `number` | `200` | Adjust how often to trickle/increment, in ms.

@@ -38,7 +38,6 @@ const queue = (() => {
 export const NProgress = ({
   enabled = false,
   minimum = 0.8,
-  speed = 200,
   trickleSpeed = 200,
   height = 2,
   backgroundColor = "blue"
@@ -92,20 +91,15 @@ export const NProgress = ({
 
     queue(next => {
       Animated.timing(animated, {
-        toValue: status.current || 0,
+        toValue: n === 1 ? 1 : status.current || 0,
         useNativeDriver: true
-      }).start();
-
-      if (n === 1) {
-        Animated.timing(animated, {
-          toValue: 1,
-          useNativeDriver: true
-        }).start(() => {
+      }).start(() => {
+        if (n === 1) {
           animated.setValue(0);
-        });
-      } else {
-        setTimeout(next, speed);
-      }
+        } else {
+          next();
+        }
+      });
     });
   };
 
