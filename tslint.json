@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "tslint:latest",
+    "tslint-config-prettier"
+  ],
+  "linterOptions": {
+    "exclude": [
+      "node_modules/**/*",
+      "docs/**/*",
+      "examples/**/*",
+      "lib/**/*"
+    ]
+  }
+}
