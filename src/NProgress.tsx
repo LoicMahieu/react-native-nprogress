@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { memo, useEffect, useRef, useState } from "react";
 import { Animated, StyleSheet, View } from "react-native";
 
 const styles = StyleSheet.create({
@@ -35,7 +35,7 @@ const queue = (() => {
   };
 })();
 
-export const NProgress = ({
+const NProgressBase = ({
   enabled = false,
   minimum = 0.8,
   trickleSpeed = 200,
@@ -161,3 +161,5 @@ export const NProgress = ({
     </View>
   );
 };
+
+export const NProgress = memo(NProgressBase);
